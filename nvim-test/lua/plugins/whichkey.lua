@@ -18,6 +18,8 @@ return {
             {"<leader>l", group="+lsp"},
             {"<leader>c", group="+code"},
             {"<leader>d", group="+diagnostics"},
+            {"<leader>q", group="+session"},
+            {"<leader>t", group="+LaTeX"},
             {"g", group="+goto"},
         },
 

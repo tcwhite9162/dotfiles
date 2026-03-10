@@ -7,16 +7,21 @@ return {
       direction = "float",
       float_opts = { border = "rounded" },
 
-      on_open = function(term)
-        -- Get the buffer you were in BEFORE opening the terminal
-        local prev_buf = vim.fn.bufnr("#")
-        local dir = vim.fn.expand("#" .. prev_buf .. ":p:h")
+      -- ⭐ Keep terminal state
+      persist_size = true,
+      persist_mode = true,
+      persist_dir = true,
 
-        if dir ~= "" then
-          vim.api.nvim_chan_send(term.job_id, "cd " .. dir .. "\n")
-          vim.api.nvim_chan_send(term.job_id, "clear\n")
-        end
-      end,
+      -- Optional: don't auto-change directory to Neovim's cwd
+      autochdir = false,
     })
+
+    -- ⭐ Always use the same terminal (ID = 1)
+    local Terminal = require("toggleterm.terminal").Terminal
+    local main_term = Terminal:new({ id = 1 })
+
+    vim.keymap.set("n", "<C-/>", function()
+      main_term:toggle()
+    end)
   end,
 }
