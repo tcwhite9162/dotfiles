@@ -45,3 +45,8 @@ abbrevs["vec"] = "std::vector<><Left>"
 for typo, correct in pairs(abbrevs) do
 	vim.cmd("iabbrev " .. typo .. " " .. correct)
 end
+
+-- command for lanuching zathura favorites with telescope
+vim.api.nvim_create_user_command("ZathuraFavorites", function()
+  require("zathura_favorites").zathura_favorites()
+end, {})

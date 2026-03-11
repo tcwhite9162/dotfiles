@@ -1,0 +1,6 @@
+add_newline = false
+format = '[\[$directory\]](bold white) ❯ '
+
+[directory]
+style = "fg:#bbffdd"
+format = "[$path]($style)"
