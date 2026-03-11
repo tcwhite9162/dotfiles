@@ -1,0 +1,64 @@
+# ~/.bashrc
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+export EDITOR="nvim"
+
+#  Aliases
+alias v='nvim .'
+alias nvim-test='NVIM_APPNAME=nvim-test nvim'
+
+alias nvim-conf='cd ~/.config/nvim-test'
+alias z-favs='nvim ~/.config/nvim-test/zathura-favorites'
+
+alias ls='exa --classify'
+alias ls1='exa -1 --classify'
+
+alias la='exa -a --classify'
+alias la1='exa -a1 --classify'
+
+alias ll='exa -lH --classify'
+alias ll1='exa -lH1 --classify'
+
+alias lr='exa | exa --classify'
+alias lr1='exa | exa -1 --classify'
+
+alias cat='bat'
+
+alias ..='cd ..'
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'
+alias grep='grep --color=auto'
+
+alias source='source ~/.bashrc'
+
+alias conf='cd ~/.config/'
+alias hypr='cd ~/.config/hypr/'
+
+alias mk='cmake --build .'
+
+# Prompt
+# PS1='[~/${PWD##*/}] ❯ '
+
+# Case-insensitive tab completion
+bind "set completion-ignore-case on"
+
+# for haskell to work in vscode (wtf)
+export PATH="$HOME/.ghcup/bin:$HOME/.ghcup/ghc/9.6.7/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Source goto if available
+[[ -s "/usr/local/share/goto.sh" ]] && source /usr/local/share/goto.sh
+
+export MANPAGER='nvim +Man! '
+
+[ -f "/home/tcwhite/.ghcup/env" ] && . "/home/tcwhite/.ghcup/env" # ghcup-env
+
+# for vim keybinds
+#set -o vi
+
+# for startship prompt
+eval "$(starship init bash)"
