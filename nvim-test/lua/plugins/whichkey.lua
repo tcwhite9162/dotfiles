@@ -1,30 +1,31 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
-    opts = {
-        win = {
-            border = 'rounded',
-            padding = {1,2,2,2},
-        },
+	opts = {
+		win = {
+			border = "rounded",
+			padding = { 1, 2, 2, 2 },
+		},
 
-        layout = {
-            spacing = 5
-        },
+		layout = {
+			spacing = 5,
+		},
 
-        spec = {
-            {"<leader>b", group="+buffer"},
-            {"<leader>s", group="+search"},
-            {"<leader>w", group="+windows"},
-            {"<leader>l", group="+lsp"},
-            {"<leader>c", group="+code"},
-            {"<leader>d", group="+diagnostics"},
-            {"<leader>q", group="+session"},
-            {"<leader>t", group="+LaTeX"},
-            {"g", group="+goto"},
-        },
+		spec = {
+			{ "<leader>b", group = "+buffer" },
+			{ "<leader>s", group = "+search" },
+			{ "<leader>w", group = "+windows" },
+			{ "<leader>l", group = "+lsp" },
+			{ "<leader>c", group = "+code" },
+			{ "<leader>d", group = "+diagnostics" },
+			{ "<leader>q", group = "+session" },
+			{ "<leader>t", group = "+LaTeX" },
+            { "<leader>k", desc = "+snippets" },
+			{ "g", group = "+goto" },
+		},
 
-        preset = 'helix'
-    },
+		preset = "helix",
+	},
 	config = function(_, opts)
 		require("which-key").setup(opts)
 	end,

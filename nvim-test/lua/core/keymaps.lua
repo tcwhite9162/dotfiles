@@ -272,3 +272,24 @@ map("n", "<leader>m", "<cmd>Markview<cr>", { desc = "Toggle MarkView" })
 -- zathura favorites selection menu
 vim.keymap.set("n", "<leader>zz", function() require("zathura_favorites").zathura_favorites()
 end, { desc = "Open Zathura Favorites" })
+
+-- LuaSnip: expand or jump forward
+vim.keymap.set({ "i", "s" }, "<C-j>", function()
+  local ls = require("luasnip")
+  if ls.expand_or_jumpable() then
+    ls.expand_or_jump()
+  end
+end, { silent = true })
+
+-- LuaSnip: jump backward
+vim.keymap.set({ "i", "s" }, "<C-k>", function()
+  local ls = require("luasnip")
+  if ls.jumpable(-1) then
+    ls.jump(-1)
+  end
+end, { silent = true })
+
+-- snippets window
+vim.keymap.set("n", "<leader>k", function()
+  require("config.snippets_window")()
+end, { desc = "Snippet cheat‑sheet" })
