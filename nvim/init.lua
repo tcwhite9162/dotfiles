@@ -1,14 +1,39 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+vim.opt.shortmess:append("I")
+vim.opt.clipboard = "unnamedplus"
+vim.opt.cmdheight = 0
 
--- uncomment these two lines for relative line numbers
---vim.wo.number = true
---vim.wo.relativenumber = true
+vim.opt.wildmenu = true
+vim.opt.wildmode = "longest:full,full"
+vim.opt.wildoptions = "pum"
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		lazypath,
+	})
+end
+
+vim.opt.rtp:prepend(lazypath)
+
+vim.opt.hidden = false
+
+-- Load plugins
+require("core.keymaps")
+require("core.options")
+require("lazy").setup("plugins")
+
+require("mini.icons").setup()
+require("mini.icons").mock_nvim_web_devicons()
 
 local abbrevs = {}
--- Persistent abbreviations
+
 abbrevs["#i"] = "#include <><Left>"
-abbrevs["#I"] = "#include \"\"<Left>"
+abbrevs["#I"] = '#include ""<Left>'
 abbrevs["#p"] = "#pragma once"
 abbrevs["fori"] = "for (int i = 0; i < n; i++) {<CR>"
 abbrevs["forij"] = "for (int i = 0; i < n; i++) {<CR> for (int j = 0; j < m; j++) {<CR>"
@@ -17,15 +42,11 @@ abbrevs["cout"] = "cout << << std::endl;<Esc>F<hhi"
 abbrevs["cstr"] = "const std::string&"
 abbrevs["vec"] = "std::vector<><Left>"
 
--- function to eat the triggering space after abbreviations
-
--- Loop through the table and set the abbreviations
 for typo, correct in pairs(abbrevs) do
-    vim.cmd("iabbr " .. typo .. " " .. correct)
+	vim.cmd("iabbrev " .. typo .. " " .. correct)
 end
 
-
-vim.opt.tabstop = 4 -- Display a tab character as 4 spaces wide
-vim.opt.shiftwidth = 4 -- Use 4 spaces for auto-indentation
-vim.opt.softtabstop = 4 -- Add/remove 4 spaces when pressing Tab/Backspace
-vim.opt.expandtab = true -- Insert spaces when Tab is pressed
+-- command for lanuching zathura favorites with telescope
+vim.api.nvim_create_user_command("ZathuraFavorites", function()
+  require("zathura_favorites").zathura_favorites()
+end, {})
