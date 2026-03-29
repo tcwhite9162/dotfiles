@@ -1,27 +1,19 @@
 return {
-  "akinsho/toggleterm.nvim",
-  version = "*",
+  "numToStr/FTerm.nvim",
   config = function()
-    require("toggleterm").setup({
-      open_mapping = [[<C-/>]],
-      direction = "float",
-      float_opts = { border = "rounded" },
-
-      -- ⭐ Keep terminal state
-      persist_size = true,
-      persist_mode = true,
-      persist_dir = true,
-
-      -- Optional: don't auto-change directory to Neovim's cwd
-      autochdir = false,
+    require("FTerm").setup({
+      border = "rounded",
+      dimensions = {
+        height = 0.9,
+        width = 0.9,
+      },
+      blend = 0,
     })
 
-    -- ⭐ Always use the same terminal (ID = 1)
-    local Terminal = require("toggleterm.terminal").Terminal
-    local main_term = Terminal:new({ id = 1 })
-
-    vim.keymap.set("n", "<C-/>", function()
-      main_term:toggle()
-    end)
+    -- Toggle with <C-/>
+    local fterm = require("FTerm")
+    vim.keymap.set({ "n", "t" }, "<C-_>", function()
+      fterm.toggle()
+    end, { desc = "Toggle FTerm" })
   end,
 }

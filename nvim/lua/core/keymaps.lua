@@ -11,6 +11,8 @@ local lines = vim.o.lines
 local vim_diagnostic = vim.diagnostic
 
 map("n", "<C-l>", "<cmd>nohlsearch<cr>", { desc = "clear search" })
+-- Escape terminal mode with <Esc>
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
 map("n", "q:", "<cmd>q<cr>", { silent = true })
 map("n", "Q", "<nop>", { silent = true }) -- Optional: disable 'Q' command
@@ -290,6 +292,6 @@ vim.keymap.set({ "i", "s" }, "<C-k>", function()
 end, { silent = true })
 
 -- snippets window
-vim.keymap.set("n", "<leader>k", function()
+vim.keymap.set("n", "<leader>kt", function()
   require("config.snippets_window")()
-end, { desc = "Snippet cheat‑sheet" })
+end, { desc = "Latex Snippet cheat‑sheet" })

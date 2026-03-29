@@ -105,7 +105,7 @@ main() {
 
 
     if [ -n "$file" ]; then
-        $edit "$file" &
+        kitty --class kitty-nvim -e sh -c "nvim $file"
     fi
 }
 

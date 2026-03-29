@@ -99,6 +99,12 @@ return {
         -- subsubsection
         s("sssec", fmt("\\subsubsection*{{{}}}", { i(1) })),
 
+        -- hspace
+        s("hsp", fmt("\\hspace*{{10pt{}}}", { i(1) })),
+
+        -- vspace
+        s("vsp", fmt("\\vspace{{10pt{}}}", { i(1) })),
+
         })
   end,
 }
