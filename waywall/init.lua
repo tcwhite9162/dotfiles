@@ -23,26 +23,25 @@ config.actions = {
 
     ["Ctrl-Alt-M"] = function()
         helpers.toggle_floating()
-        -- waywall.show_floating(not waywall.floating_shown())
     end,
 
-    ["T"] = function()
+    ["Alt-T"] = function()
         helpers.toggle_res(300, 1080)()
     end,
 
-    ["G"] = function()
+    ["Alt-G"] = function()
         helpers.toggle_res(1920, 300)()
     end,
 
-    ["H"] = function()
+    ["Alt-H"] = function()
         if mirror == nil then
             mirror = waywall.mirror(
                 {
                     src = {
-                        x = 1920 / 2 - 100,
-                        y = 1080 / 2 - 100,
-                        w = 200,
-                        h = 200,
+                        x = 1920 / 2 - 50,
+                        y = 1080 / 2 - 50,
+                        w = 100,
+                        h = 100,
                     },
 
                     dst = {
