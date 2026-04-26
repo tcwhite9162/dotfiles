@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # STATE=$(hyprctl -j getoption decoration:blur:enabled | jq -r ".int")
 #
 # if [ "$STATE" == "1" ]; then
@@ -8,7 +10,6 @@
 
 
 
-#!/bin/bash
 
 CFG_DIR="$HOME/.config/hypr/terminal-blur"
 ACTIVE="$CFG_DIR/active"
