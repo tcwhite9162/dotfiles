@@ -12,8 +12,8 @@
 	"format-alt-click": "click",
 	"interval": 3600,
 	"return-type": "json",
-	"exec": "$HOME/.config/hypr/UserScripts/Weather.py",
-	//"exec": "$HOME/.config/hypr/UserScripts/Weather.sh",
+	//"exec": "$HOME/.config/hypr/UserScripts/Weather.py",
+	"exec": "$HOME/.config/hypr/UserScripts/Weather.sh",
 	//"exec-if": "ping wttr.in -c1",
 	"tooltip": true,
 },
@@ -23,6 +23,18 @@
 	"on-click": "hyprpicker | wl-copy",
 	"tooltip": true,
 	"tooltip-format": "Hyprpicker",
+},
+
+"custom/keyd-layout": {
+	"format": "{}",
+    "exec": "cat $HOME/.config/waybar/kb_layout",
+    "interval": 1
+},
+
+"custom/airpods": {
+	"format": "{}",
+    "exec": "~/.config/waybar/scripts/airpods-volume.sh",
+    "interval": 20
 },
 
 "custom/file_manager": {
@@ -89,13 +101,6 @@
 	"on-click-right": "hyprlock"
 },
 
-"custom/keyboard": {
-	"exec": "cat $HOME/.cache/kb_layout",
-	"interval": 1,
-	"format": " {}",
-	"on-click": "$HOME/.config/hypr/scripts/SwitchKeyboardLayout.sh",
-},
-
 "custom/light_dark": {
 	"format": "󰔎 ",
 	"on-click": "$HOME/.config/hypr/scripts/DarkLight.sh",
@@ -113,7 +118,7 @@
 },
 
 "custom/menu": {
-	"format": "  ",
+	"format": " ",
 	"on-click": "pkill rofi || rofi -show drun -modi run,drun,filebrowser,window",
 	"on-click-middle": "$HOME/.config/hypr/UserScripts/WallpaperSelect.sh",
 	"on-click-right": "$HOME/.config/hypr/scripts/WaybarLayout.sh",
@@ -217,7 +222,7 @@
 	"tooltip": false
 },
 "custom/separator#blank": {
-	"format": "",
+	"format": " ",
 	"interval": "once",
 	"tooltip": false
 },

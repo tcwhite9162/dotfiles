@@ -1,6 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-
-// ### Minimal - Long ### //
 
 {
 "include": [
@@ -8,44 +5,45 @@
   "$HOME/.config/waybar/ModulesWorkspaces",
   "$HOME/.config/waybar/ModulesCustom",
   "$HOME/.config/waybar/ModulesGroups",
-  "$HOME/.config/waybar/UserModules",
+  "$HOME/.config/waybar/UserModules"
   ],
 "layer": "top",
-//"mode": "dock",
+"mode": "dock",
 "exclusive": true,
 "passthrough": false,
 "position": "top",
-"spacing": 6,
+"spacing": 3,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 3,
-"margin-left": 8,
-"margin-right": 8,
+"margin-top":    3,
+"margin-bottom": 3,
+"margin-left":   3,
+"margin-right":  3,
 
 "modules-left": [
 	"custom/menu",
-	"idle_inhibitor",
 	"hyprland/workspaces#numbers",
-	"custom/separator#line",
-	//"group/audio",
+	"custom/separator#blank",
     "network",
-    "bluetooth"
+    "pulseaudio",
+    "custom/airpods"
+    //"bluetooth",
 	],
 "modules-center": [
 	"clock"
 	],
 "modules-right": [
-	"group/notify",
-	"custom/separator#line",
 	"temperature",		
+	//"custom/separator#blank",
 	"memory",
-  "power-profiles-daemon",
-	//"group/mobo_drawer",
-	"custom/separator#line",
-	"custom/separator#blank_3",
-	"custom/separator#line",
-	"group/laptop",
-	"custom/power"
+	//"custom/separator#blank",
+    "power-profiles-daemon",
+	"custom/separator#blank",
+    "custom/keyd-layout",
+	//"custom/separator#blank_3",
+	"custom/separator#blank",
+	"battery",
+	//"custom/separator#blank",
+	"custom/separator#blank"
 	]
-
 }

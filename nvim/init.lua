@@ -6,6 +6,10 @@ vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
 vim.opt.wildoptions = "pum"
 
+-- case insensitive search on lowercase
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -30,8 +34,8 @@ require("lazy").setup("plugins")
 require("mini.icons").setup()
 require("mini.icons").mock_nvim_web_devicons()
 
+-- abbrevioations
 local abbrevs = {}
-
 abbrevs["#i"] = "#include <><Left>"
 abbrevs["#I"] = '#include ""<Left>'
 abbrevs["#p"] = "#pragma once"

@@ -14,7 +14,7 @@ fi
 keybinds_conf="$HOME/.config/hypr/configs/Keybinds.conf"
 user_keybinds_conf="$HOME/.config/hypr/UserConfigs/UserKeybinds.conf"
 laptop_conf="$HOME/.config/hypr/UserConfigs/Laptops.conf"
-rofi_theme="$HOME/.config/rofi/config-edit.rasi"
+rofi_theme="$HOME/.config/rofi/keybinds.rasi"
 msg=' Clicking or pressing Enter will have no function'
 
 # combine the contents of the keybinds files and filter for keybinds

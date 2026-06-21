@@ -12,7 +12,7 @@ return {
 
     -- Toggle with <C-/>
     local fterm = require("FTerm")
-    vim.keymap.set({ "n", "t" }, "<C-_>", function()
+    vim.keymap.set({ "n", "t" }, "<C-<>", function()
       fterm.toggle()
     end, { desc = "Toggle FTerm" })
   end,
