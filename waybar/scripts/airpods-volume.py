@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Configure update duration (update after n seconds)
 MIN_RSSI = -60
-NUM_ATTEMPTS = 10
+NUM_ATTEMPTS = 2
 AIRPODS_MANUFACTURER = 76
 AIRPODS_DATA_LENGTH = 54
 RECENT_BEACONS_MAX_T_NS = 10_000_000_000
@@ -138,8 +138,10 @@ def run():
             json_data = dumps(data)
             t = json.loads(json_data)
             out = ""
+            if t["charge"]["case"] != -1:
+                out += "C:" + str(t["charge"]["case"]) + "% "
             if t["charge"]["left"] != -1:
-                out += "L:" + str(t["charge"]["left"]) + "%"
+                out += "L:" + str(t["charge"]["left"]) + "% "
             if t["charge"]["right"] != -1:
                 out += "R:" + str(t["charge"]["right"]) + "%"
             print(out)

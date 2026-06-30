@@ -28,13 +28,29 @@
 "custom/keyd-layout": {
 	"format": "{}",
     "exec": "cat $HOME/.config/waybar/kb_layout",
-    "interval": 1
+    "interval": 10
 },
 
 "custom/airpods": {
 	"format": "{}",
     "exec": "~/.config/waybar/scripts/airpods-volume.sh",
-    "interval": 20
+    "interval": 90
+},
+
+"custom/redshift": {
+	"format": "{}",
+    "exec": "~/.config/waybar/scripts/redshift.sh",
+    "return-type": "json",
+	"on-click": "~/.config/hypr/scripts/toggle-redshift.sh",
+    "interval": 5
+},
+
+"custom/blur": {
+	"format": "{}",
+    "exec": "~/.config/waybar/scripts/blur.sh",
+    "return-type": "json",
+	"on-click": "~/.config/hypr/scripts/ChangeTransparent.sh",
+    "interval": 5
 },
 
 "custom/file_manager": {
@@ -206,8 +222,8 @@
 	"interval": "once",
 	"tooltip": false
 },
-"custom/separator#dot-line": {
-	"format": "",
+"custom/separator#bar": {
+	"format": "|",
 	"interval": "once",
 	"tooltip": false
 },

@@ -46,6 +46,6 @@ map ctrl+5 goto_tab 5
 
 
 # BEGIN_KITTY_THEME
-# Kaolin Ocean
+# Bliss
 include current-theme.conf
 # END_KITTY_THEME

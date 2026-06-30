@@ -26,8 +26,12 @@
 	"custom/separator#blank",
     "network",
     "pulseaudio",
-    "custom/airpods"
-    //"bluetooth",
+    "custom/airpods",
+    "custom/separator#blank",
+    "custom/separator#bar",
+    "custom/separator#blank",
+    "custom/redshift",
+    "custom/blur"
 	],
 "modules-center": [
 	"clock"

@@ -7,7 +7,7 @@
 	font-weight: bold;
 	min-height: 0;	
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
+	font-size: 98%;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 	
@@ -132,8 +132,39 @@ window#waybar.empty #window {
 }
 	 
 #temperature.critical {
-	background-color: #fcce03;
+    color: #dddddd;
+	background-color: #bb2200;
 }
+
+#custom-redshift {
+    padding-left:  4px;
+    padding-right: 4px;
+}
+    #custom-redshift.off {
+        font-size: 19;
+        color: rgba(150, 150, 255, 0.7);
+    }
+    #custom-redshift.low {
+        font-size: 16;
+        color: rgba(255, 200, 175, 1);
+    }
+    #custom-redshift.high {
+        font-size: 16;
+        color: rgba(255, 100, 100, 0.6);
+    }
+
+#custom-blur {
+    padding-left: 10px;
+}
+    #custom-blur.on {
+        color: rgba(205, 200, 200, 0.8);
+    }
+    #custom-blur.medium {
+        color: rgba(150, 150, 150, 0.8);
+    }
+    #custom-blur.off {
+        color: rgba(100, 100, 100, 0.8);
+    }
    
 @keyframes blink {
 	to {

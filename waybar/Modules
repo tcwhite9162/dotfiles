@@ -12,13 +12,9 @@
 		"/sys/class/hwmon/hwmon1/temp1_input",
 		"/sys/class/thermal/thermal_zone0/temp"
 	],
-	//"thermal-zone": 0,
-	"critical-threshold": 82,
-	"format-critical": "{temperatureC}°C {icon}",
+	"critical-threshold": 80,
+	"format-critical": "{temperatureC}°C",
 	"format": "{temperatureC}°C",
-	//"format-icons": [
-	//	"󰈸"
-	//],
 	"on-click": "kitty -e btop"
 },
 
