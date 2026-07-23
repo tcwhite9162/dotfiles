@@ -1,0 +1,136 @@
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "", 0 } }
+}
+{ 11, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "NoiceDebug ", 0 } }
+}
+{ 18, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope commands", 0 } }
+}
+{ true,
+  event = "cmdline_hide",
+  kind = 1
+}
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "", 0 } }
+}
+{ 1, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "t", 0 } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "te", 0 } }
+}
+{ 3, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "tek", 0 } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "te", 0 } }
+}
+{ 3, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "tel", 0 } }
+}
+{ 4, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "tele", 0 } }
+}
+{ 5, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "teles", 0 } }
+}
+{ 6, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "telesc", 0 } }
+}
+{ 7, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "telescp", 0 } }
+}
+{ 8, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "telescpo", 0 } }
+}
+{ 7, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "telescp", 0 } }
+}
+{ 6, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "telesc", 0 } }
+}
+{ 1,
+  event = "cmdline_pos",
+  kind = 9
+}
+{ 10, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope ", 0 } }
+}
+{ 11, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope c", 0 } }
+}
+{ 12, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope co", 0 } }
+}
+{ 13, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope com", 0 } }
+}
+{ 14, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope comm", 0 } }
+}
+{ 15, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope comma", 0 } }
+}
+{ 16, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope comman", 0 } }
+}
+{ 17, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope command", 0 } }
+}
+{ 18, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "Telescope commands", 0 } }
+}
+{ true,
+  event = "cmdline_hide",
+  kind = 1
+}
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "", 0 } }
+}
+{ true,
+  event = "cmdline_hide",
+  kind = 1
+}
+{ 0, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "", 0 } }
+}
+{ 1, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "w", 0 } }
+}
+{ 2, ":", "", 0, 1, 0,
+  event = "cmdline_show",
+  kind = { { 0, "wq", 0 } }
+}
+{ false,
+  event = "cmdline_hide",
+  kind = 1
+}

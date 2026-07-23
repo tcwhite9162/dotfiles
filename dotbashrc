@@ -1,0 +1,62 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+#  Aliases
+alias v='nvim'
+alias z-favs='nvim ~/.config/nvim/zathura-favorites'
+
+alias starthyprland='start-hyprland >/dev/null'
+alias battery='upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep -A1 time'
+
+alias ls='exa --classify'
+alias l1='exa -1 --classify'
+
+alias la='exa -a --classify'
+alias la1='exa -a1 --classify'
+
+alias ll='exa -lH --classify'
+alias lh='exa -lh --classify'
+
+alias tree='exa -T --classify'
+
+alias cat='bat'
+
+alias ..='cd ..'
+
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -I'
+alias grep='grep --color=auto'
+
+alias conf='cd ~/.config/'
+alias hypr='cd ~/.config/hypr/'
+
+# Case-insensitive tab completion
+bind "set completion-ignore-case on"
+
+# for scripts
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/lib64:$PATH"
+
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | wl-copy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+export MANPAGER='nvim +Man! '
+
+source /usr/share/fzf/completion.bash
+source /usr/share/fzf/key-bindings.bash
+
+# for vim keybinds
+set -o vi
+
+# for startship prompt
+eval "$(starship init bash)"
+
+eval "$(zoxide init --cmd cd bash)"

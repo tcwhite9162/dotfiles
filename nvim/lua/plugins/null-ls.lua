@@ -1,21 +1,17 @@
 return {
-  "nvimtools/none-ls.nvim",
-  dependencies = { "nvim-lua/plenary.nvim" },
-  config = function()
-    local null_ls = require("null-ls")
+    "nvimtools/none-ls.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+        local null_ls = require("null-ls")
 
-    null_ls.setup({
-      sources = {
-        -- C / C++
-        null_ls.builtins.formatting.clang_format,
+        null_ls.setup({
+            filetypes = {"python", "markdown", "tex"},
+            sources = {
+                null_ls.builtins.formatting.prettier,
 
-        -- Python
-        null_ls.builtins.formatting.black,
-        null_ls.builtins.diagnostics.flake8,
-
-        -- Rust (usually rust-analyzer handles format, but this is here if you want it)
-        null_ls.builtins.formatting.rustfmt,
-      },
-    })
-  end,
+                null_ls.builtins.formatting.black,
+                null_ls.builtins.diagnostics.flake8,
+            },
+        })
+    end,
 }

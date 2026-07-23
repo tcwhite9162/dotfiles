@@ -6,7 +6,7 @@ configuration {
 
     filebrowser {
         show-hidden: true;
-        directory: "/home/tcwhite/";
+        directory: "/home/tcwhite/Media/Lectures/";
         sorting-method: "mtime";
     } 
 }

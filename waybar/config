@@ -1,1 +1,48 @@
-/home/tcwhite/.config/waybar/configs/[TOP| Minimal - Long
+
+{
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  "$HOME/.config/waybar/UserModules"
+  ],
+"layer": "top",
+"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top":    3,
+"margin-bottom": 3,
+"margin-left":   3,
+"margin-right":  3,
+
+"modules-left": [
+	"custom/menu",
+	"hyprland/workspaces#numbers",
+	// "custom/separator#blank",
+    "network",
+    "pulseaudio",
+    "custom/airpods",
+    // "custom/separator#line",
+    // "custom/redshift",
+    "custom/blur",
+    "custom/keyd-layout"
+	],
+"modules-center": [
+	"clock"
+	],
+"modules-right": [
+	"temperature",		
+	//"custom/separator#blank",
+	"memory",
+	//"custom/separator#blank",
+    "power-profiles-daemon",
+	"battery",
+	//"custom/separator#blank",
+	"custom/separator#blank_2"
+	]
+}

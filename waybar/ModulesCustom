@@ -223,7 +223,7 @@
 	"tooltip": false
 },
 "custom/separator#bar": {
-	"format": "|",
+	"format": "",
 	"interval": "once",
 	"tooltip": false
 },
@@ -233,7 +233,7 @@
 	"tooltip": false
 },
 "custom/separator#line": {
-	"format": "-",
+	"format": " ╼╾ ",
 	"interval": "once",
 	"tooltip": false
 },
